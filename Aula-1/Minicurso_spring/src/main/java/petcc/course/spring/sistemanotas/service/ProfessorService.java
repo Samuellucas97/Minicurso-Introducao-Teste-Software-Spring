@@ -18,7 +18,7 @@ public class ProfessorService {
     private final ProfessorRepository professorRepository;
 
     public List<Professor> findAll(){
-        return professorRepository.findAll();
+        return this.professorRepository.findAll();
     }
 
     public Professor findById(Integer id){
@@ -26,12 +26,14 @@ public class ProfessorService {
     }
 
     public Professor save(Professor professor){
-        return professorRepository.save(professor);
+        return this.professorRepository.save(professor);
     }
 
     public void delete(Integer id){
-        professorRepository.deleteById(id);
+        this.professorRepository.deleteById(id);
     }
+
+    public void update(Professor professor) { this.professorRepository.save(professor); }
 
     private Professor findProfessorOrThrowNotFound(Integer id) {
         return this.professorRepository.findById(id)

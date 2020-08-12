@@ -15,8 +15,8 @@ public class Notas {
     private Aluno aluno;
     @ManyToOne
     private Disciplina disciplina;
-    @NotNull
+    @NotNull(message = "A nota não pode ser nula")
     private Double nota;
-    @NotNull
+    @NotNull(message = "O semestre da nota não pode ser nulo")
     private String semestre;
 }

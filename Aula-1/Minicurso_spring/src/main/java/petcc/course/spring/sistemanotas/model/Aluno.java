@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
@@ -16,14 +17,15 @@ public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @CPF
+    @NotNull(message = "O nome do aluno não pode ser nulo")
+    @NotEmpty(message = "O nome do aluno não pode ser vazio")
+    private String nome;
+    @CPF(message = "O CPF do aluno é inválido")
     @Column(unique = true)
     private String cpf;
-    @Email
+    @Email(message = "O email do aluno é inválido")
     @Column(unique = true)
     private String email;
-    @NotNull
-    private String nome;
-    @NotNull
+    @NotNull(message = "O curso do aluno não pode ser nulo")
     private String curso;
 }

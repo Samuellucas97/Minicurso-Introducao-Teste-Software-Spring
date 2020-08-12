@@ -31,12 +31,14 @@ public class DisciplinaService {
     }
 
     public Disciplina save(Disciplina disciplina){
-        return disciplinaRepository.save(disciplina);
+        return this.disciplinaRepository.save(disciplina);
     }
 
     public void delete(Integer id){
-        disciplinaRepository.delete(this.findDisciplinaOrThrowNotFound(id));
+        this.disciplinaRepository.delete(this.findDisciplinaOrThrowNotFound(id));
     }
+
+    public void update(Disciplina disciplina) { this.disciplinaRepository.save(disciplina);}
 
     private Disciplina findDisciplinaOrThrowNotFound(Integer id) {
         return this.disciplinaRepository.findById(id)
