@@ -12,8 +12,8 @@ public class Disciplina {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "O nome da disciplina não pode ser nulo")
+    @NotEmpty(message = "O nome da disciplina não pode ser vazio")
     private String nome;
     @ManyToOne
     private Professor professor;

@@ -35,6 +35,10 @@ public class AlunoService {
         this.alunoRepository.delete(this.findAlunoOrThrowNotFound(id));
     }
 
+    public void update(Aluno aluno) {
+        this.alunoRepository.save(aluno);
+    }
+
     private Aluno findAlunoOrThrowNotFound(Integer id) {
         return this.alunoRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Aluno não encontrado"));

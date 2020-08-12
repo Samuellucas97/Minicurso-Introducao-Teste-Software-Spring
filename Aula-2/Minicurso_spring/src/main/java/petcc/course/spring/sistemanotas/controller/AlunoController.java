@@ -9,6 +9,7 @@ import petcc.course.spring.sistemanotas.model.Aluno;
 import petcc.course.spring.sistemanotas.service.AlunoService;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/alunos")
@@ -17,32 +18,40 @@ public class AlunoController {
     private final AlunoService alunoService;
 
     @GetMapping
-    @ApiOperation(value = "Endpoint para buscar alunos",
-                    notes = "Endpoint usado para buscar todos os alunos presentes no sistema",
-                    response = Aluno.class,
-                    httpMethod = "GET")
-    public ResponseEntity<?> findAll(){
+    @ApiOperation(value = "Busca todos alunos")
+    public ResponseEntity<List<Aluno>> findAll(){
         return ResponseEntity.ok(alunoService.findAll());
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<?> findById(@PathVariable Integer id){
+    @ApiOperation(value = "Busca aluno pelo id")
+    public ResponseEntity<Aluno> findById(@PathVariable Integer id){
         return ResponseEntity.ok(alunoService.findById(id));
     }
 
     @GetMapping(value = "/busca-nome/{nome}")
-    public ResponseEntity<?> findByNome(@PathVariable String nome){
+    @ApiOperation(value = "Busca aluno por nome")
+    public ResponseEntity<List<Aluno>> findByNome(@PathVariable String nome){
         return ResponseEntity.ok(alunoService.findByName(nome));
     }
 
     @PostMapping
-    public ResponseEntity<?> save(@RequestBody @Valid Aluno aluno){
+    @ApiOperation(value="Salva um novo aluno")
+    public ResponseEntity<Aluno> save(@RequestBody @Valid Aluno aluno){
         return ResponseEntity.ok(alunoService.save(aluno));
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<?> delete(@PathVariable Integer id){
+    @ApiOperation(value="Remove um aluno")
+    public ResponseEntity<Void> delete(@PathVariable Integer id){
         alunoService.delete(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @PutMapping
+    @ApiOperation(value="Atualiza um aluno")
+    public ResponseEntity<Void> update(@RequestBody @Valid Aluno aluno) {
+        alunoService.update(aluno);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
