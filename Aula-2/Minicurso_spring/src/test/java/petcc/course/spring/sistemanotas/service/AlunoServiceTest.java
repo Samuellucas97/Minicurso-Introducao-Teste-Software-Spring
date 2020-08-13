@@ -115,9 +115,8 @@ class AlunoServiceTest {
     public void delete_RemoveAluno_WhenSuccessful(){
 
         /// CONFIGURAÇÃO
-        When
         /// EXECUÇÃO
-        alunoServiceSUT.delete();
+//        alunoServiceSUT.delete();
         /// VERIFICAÇÃO
 
     }
