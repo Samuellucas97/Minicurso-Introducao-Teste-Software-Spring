@@ -1,8 +1,6 @@
 package petcc.course.spring.sistemanotas.model;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
@@ -12,6 +10,9 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity
 public class Aluno {
     @Id
