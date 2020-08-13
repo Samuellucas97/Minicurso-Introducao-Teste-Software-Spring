@@ -3,7 +3,6 @@ package petcc.course.spring.sistemanotas.service;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.BDDMockito;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -12,10 +11,13 @@ import petcc.course.spring.sistemanotas.repository.AlunoRepository;
 import petcc.course.spring.sistemanotas.util.AlunoCreator;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
@@ -23,10 +25,10 @@ import static org.mockito.Mockito.when;
 class AlunoServiceTest {
 
     @InjectMocks
-    private AlunoService alunoService;
+    private AlunoService alunoServiceSUT;
 
     @Mock
-    private AlunoRepository alunoRepository;
+    private AlunoRepository alunoRepositoryMock;
 
     @Test
     @DisplayName("listAll retorna uma lista de alunos quando bem sucedido")
@@ -34,12 +36,12 @@ class AlunoServiceTest {
 
         // CONFIGURAÇÃO
         Aluno expectedAluno = AlunoCreator.creatingValidAluno();
-        when(alunoService.findAll()).
+        when(alunoServiceSUT.findAll()).
                 thenReturn( List.of(AlunoCreator.creatingValidAluno()));
 
         // EXECUÇÃO
 
-        List<Aluno> resultAlunoList = alunoService.findAll();
+        List<Aluno> resultAlunoList = alunoServiceSUT.findAll();
 
         // VERIFICAÇÃO
 
@@ -55,7 +57,7 @@ class AlunoServiceTest {
 
         // EXECUÇÃO
 
-        List<Aluno> resultAlunoList = alunoService.findAll();
+        List<Aluno> resultAlunoList = alunoServiceSUT.findAll();
 
         // VERIFICAÇÃO
 
@@ -72,15 +74,52 @@ class AlunoServiceTest {
         Aluno aluno = AlunoCreator.creatingValidAluno();
         String expectedNameAluno = aluno.getNome();
 
-        when(alunoService.findByName(any()))
+        when(alunoServiceSUT.findByName(any()))
                 .thenReturn(List.of(aluno));
         // EXECUÇÃO
 
-        List<Aluno> resultAlunoList = alunoService.findByName("fake");
+        List<Aluno> resultAlunoList = alunoServiceSUT.findByName("fake");
+        List<String> resultNomeOfAlunoList = resultAlunoList.stream()
+                .map(Aluno::getNome).collect(Collectors.toList());
 
         // VERIFICAÇÃO
 
-        assertThat(resultAlunoList).isNotEmpty();
+        assertAll("validations",
+                () -> assertThat(resultAlunoList).isNotEmpty(),
+                () -> assertThat(resultNomeOfAlunoList).contains(expectedNameAluno)
+        );
     }
 
-}//findByName
+    @Test
+    public void findById_ReturnAluno_WhenSuccessful() {
+
+        /// CONFIGURAÇÃO
+        Aluno aluno = AlunoCreator.creatingValidAluno();
+        Integer expectedIdAluno = aluno.getId();
+
+        when(alunoRepositoryMock.findById(anyInt()))
+                .thenReturn(Optional.of(aluno));
+
+        /// EXECUÇÃO
+        Aluno resultAluno = alunoServiceSUT.findById(1);
+
+        /// VERIFICAÇÃO
+        assertAll("validations",
+                () -> assertThat(resultAluno).isNotNull(),
+                () -> assertThat(resultAluno.getId()).isNotNull(),
+                () -> assertThat(resultAluno.getId()).isEqualTo(expectedIdAluno)
+        );
+    }
+
+    @Test
+    public void delete_RemoveAluno_WhenSuccessful(){
+
+        /// CONFIGURAÇÃO
+        When
+        /// EXECUÇÃO
+        alunoServiceSUT.delete();
+        /// VERIFICAÇÃO
+
+    }
+
+}
