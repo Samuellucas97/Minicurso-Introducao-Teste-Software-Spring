@@ -28,7 +28,7 @@ class AlunoRepositoryTest {
 
         /// Configuração do ambiente necessário para o teste
 
-        Aluno aluno = AlunoCreator.creatingAlunoToBeSave();
+        Aluno aluno = AlunoCreator.creatingAlunoToBeSaved();
 
         String expectedNome = aluno.getNome();
 

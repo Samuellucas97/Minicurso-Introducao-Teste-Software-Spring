@@ -3,7 +3,7 @@ package petcc.course.spring.sistemanotas.util;
 import petcc.course.spring.sistemanotas.model.Aluno;
 
 public class AlunoCreator {
-    public static Aluno creatingAlunoToBeSave() {
+    public static Aluno creatingAlunoToBeSaved() {
         return Aluno.builder()
                 .nome("Junior")
                 .cpf("61824635036")

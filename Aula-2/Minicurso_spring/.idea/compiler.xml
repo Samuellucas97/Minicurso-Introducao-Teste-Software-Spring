@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sistema-notas" target="9" />
+      <module name="sistema-notas" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

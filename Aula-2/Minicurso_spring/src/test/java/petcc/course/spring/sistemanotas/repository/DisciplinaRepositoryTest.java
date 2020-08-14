@@ -36,32 +36,32 @@ class DisciplinaRepositoryTest {
     public void sa (){
     }
 
-    @Test
-    @DisplayName("Save persiste uma nova disciplina no banco de dados quando bem sucedido")
-    public void save_PersistDisciplina_WhenSuccessful() {
-
-        /// CONFIGURAÇÃO
-        professorRepository.save(ProfessorCreator.creatingValidProfessor());
-        Disciplina expectedDisciplina = disciplinaRepository.save(DisciplinaCreator.creatingValidDisciplina());
-        String expectedNomeOfDisciplina = expectedDisciplina.getNome();
-        Professor expectedProfessorOfDisciplina = expectedDisciplina.getProfessor();
-
-        /// EXECUÇÃO
-        Disciplina resultDisciplina = disciplinaRepository.save(expectedDisciplina);
-
-        /// VERIFICAÇÃO
-        assertAll("validations",
-                () -> assertThat(resultDisciplina).isNotNull(),
-                () -> assertThat(resultDisciplina.getNome()).isNotNull(),
-                () -> assertThat(resultDisciplina.getNome()).isNotEmpty(),
-                () -> assertThat(resultDisciplina.getNome()).isEqualTo(expectedNomeOfDisciplina),
-                () -> assertThat(resultDisciplina.getProfessor()).isEqualTo(expectedProfessorOfDisciplina)
-        );
-
-
-        disciplinaRepository.deleteAll();
-        professorRepository.deleteAll();
-    }
+//    @Test
+//    @DisplayName("Save persiste uma nova disciplina no banco de dados quando bem sucedido")
+//    public void save_PersistDisciplina_WhenSuccessful() {
+//
+//        /// CONFIGURAÇÃO
+//        professorRepository.save(ProfessorCreator.creatingValidProfessor());
+//        Disciplina expectedDisciplina = disciplinaRepository.save(DisciplinaCreator.creatingValidDisciplina());
+//        String expectedNomeOfDisciplina = expectedDisciplina.getNome();
+//        Professor expectedProfessorOfDisciplina = expectedDisciplina.getProfessor();
+//
+//        /// EXECUÇÃO
+//        Disciplina resultDisciplina = disciplinaRepository.save(expectedDisciplina);
+//
+//        /// VERIFICAÇÃO
+//        assertAll("validations",
+//                () -> assertThat(resultDisciplina).isNotNull(),
+//                () -> assertThat(resultDisciplina.getNome()).isNotNull(),
+//                () -> assertThat(resultDisciplina.getNome()).isNotEmpty(),
+//                () -> assertThat(resultDisciplina.getNome()).isEqualTo(expectedNomeOfDisciplina),
+//                () -> assertThat(resultDisciplina.getProfessor()).isEqualTo(expectedProfessorOfDisciplina)
+//        );
+//
+//
+//        disciplinaRepository.deleteAll();
+//        professorRepository.deleteAll();
+//    }
 
 
     @Test

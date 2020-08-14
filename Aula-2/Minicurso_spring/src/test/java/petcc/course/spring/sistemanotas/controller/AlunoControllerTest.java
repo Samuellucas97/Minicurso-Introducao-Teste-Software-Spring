@@ -116,7 +116,7 @@ class AlunoControllerTest {
     public void save_CreateAluno_WhenSuccessful() {
 
         /// CONFIGURAÇÃO
-        Aluno aluno = AlunoCreator.creatingAlunoToBeSave();
+        Aluno aluno = AlunoCreator.creatingAlunoToBeSaved();
         String expectedNome = aluno.getNome();
         when(alunoServiceMock.save(any()))
                 .thenReturn(aluno);

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RestExceptionHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-notas</a> &gt; <a href="index.source.html" class="el_package">petcc.course.spring.sistemanotas.handler</a> &gt; <span class="el_source">RestExceptionHandler.java</span></div><h1>RestExceptionHandler.java</h1><pre class="source lang-java linenums">package petcc.course.spring.sistemanotas.handler;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import petcc.course.spring.sistemanotas.exception.ResourceNotFoundDetails;
+import petcc.course.spring.sistemanotas.exception.ResourceNotFoundException;
+import petcc.course.spring.sistemanotas.exception.ValidationExceptionDetails;
+
+import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.stream.Collectors;
+import java.util.List;
+
+@ControllerAdvice
+<span class="fc" id="L19">public class RestExceptionHandler {</span>
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity&lt;ResourceNotFoundDetails&gt; handleResourceNotFoundException(
+            ResourceNotFoundException exception){
+<span class="nc" id="L24">        return new ResponseEntity&lt;&gt;(</span>
+<span class="nc" id="L25">                ResourceNotFoundDetails.builder()</span>
+<span class="nc" id="L26">                        .timestamp(LocalDateTime.now())</span>
+<span class="nc" id="L27">                        .status(HttpStatus.NOT_FOUND.value())</span>
+<span class="nc" id="L28">                        .titulo(&quot;Recurso não encontrado&quot;)</span>
+<span class="nc" id="L29">                        .detalhes(exception.getMessage())</span>
+<span class="nc" id="L30">                        .mensagem(exception.getClass().getName())</span>
+<span class="nc" id="L31">                        .build(), HttpStatus.NOT_FOUND);</span>
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity&lt;ValidationExceptionDetails&gt; handleMethodArgumentNotValidException(
+            MethodArgumentNotValidException exception){
+
+<span class="nc" id="L38">        List&lt;FieldError&gt; fieldErrorList = exception.getBindingResult().getFieldErrors();</span>
+
+<span class="nc" id="L40">        String campos = fieldErrorList.stream().map(FieldError::getField).collect(Collectors.joining(&quot;,&quot;));</span>
+<span class="nc" id="L41">        String mensagem= fieldErrorList.stream().map(FieldError::getDefaultMessage).collect(Collectors.joining(&quot;,&quot;));</span>
+
+<span class="nc" id="L43">        return new ResponseEntity&lt;&gt;(</span>
+<span class="nc" id="L44">                ValidationExceptionDetails.builder()</span>
+<span class="nc" id="L45">                        .timestamp(LocalDateTime.now())</span>
+<span class="nc" id="L46">                        .status(HttpStatus.BAD_REQUEST.value())</span>
+<span class="nc" id="L47">                        .titulo(&quot;Argumento(s) de requisição errado(s)&quot;)</span>
+<span class="nc" id="L48">                        .detalhes(exception.getMessage())</span>
+<span class="nc" id="L49">                        .mensagem(exception.getClass().getName())</span>
+<span class="nc" id="L50">                        .build(), HttpStatus.BAD_REQUEST);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

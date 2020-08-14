@@ -33,33 +33,33 @@ class NotasRepositoryTest {
     @Autowired
     private ProfessorRepository professorRepository;
 
-    @Test
-    @DisplayName("Save persiste uma nova nota no banco de dados quando bem sucedido")
-    public void save_PersistNotas_WhenSuccessful() {
-
-        /// Configuração do ambiente necessário para o teste
-
-        Disciplina disciplina = DisciplinaCreator.creatingValidDisciplina();
-        String expectedNome = disciplina.getNome();
-        Professor expectedProfessor = disciplina.getProfessor();
-        professorRepository.save(ProfessorCreator.creatingValidProfessor());
-
-        /// -> Execução do método a ser testado
-
-        Disciplina resultDisciplina = disciplinaRepository.save(disciplina);
-
-        log.info("Result disciplina id: {}", resultDisciplina);
-
-        /// -> Verificação do resultado quanto ao fato de se ocorre o esperado
-
-        assertAll("validations",
-                () -> assertThat(resultDisciplina).isNotNull(),
-                () -> assertThat(resultDisciplina.getNome()).isNotNull(),
-                () -> assertThat(resultDisciplina.getNome()).isNotEmpty(),
-                () -> assertThat(resultDisciplina.getNome()).isEqualTo(expectedNome),
-                () -> assertThat(resultDisciplina.getProfessor()).isEqualTo(expectedProfessor)
-        );
-    }
+//    @Test
+//    @DisplayName("Save persiste uma nova nota no banco de dados quando bem sucedido")
+//    public void save_PersistNotas_WhenSuccessful() {
+//
+//        /// Configuração do ambiente necessário para o teste
+//
+//        Disciplina disciplina = DisciplinaCreator.creatingValidDisciplina();
+//        String expectedNome = disciplina.getNome();
+//        Professor expectedProfessor = disciplina.getProfessor();
+//        professorRepository.save(ProfessorCreator.creatingValidProfessor());
+//
+//        /// -> Execução do método a ser testado
+//
+//        Disciplina resultDisciplina = disciplinaRepository.save(disciplina);
+//
+//        log.info("Result disciplina id: {}", resultDisciplina);
+//
+//        /// -> Verificação do resultado quanto ao fato de se ocorre o esperado
+//
+//        assertAll("validations",
+//                () -> assertThat(resultDisciplina).isNotNull(),
+//                () -> assertThat(resultDisciplina.getNome()).isNotNull(),
+//                () -> assertThat(resultDisciplina.getNome()).isNotEmpty(),
+//                () -> assertThat(resultDisciplina.getNome()).isEqualTo(expectedNome),
+//                () -> assertThat(resultDisciplina.getProfessor()).isEqualTo(expectedProfessor)
+//        );
+//    }
 
 
     @Test
@@ -79,26 +79,26 @@ class NotasRepositoryTest {
                 .withMessageContaining("O nome da disciplina não pode ser vazio");
     }
 
-    @Test
-    public void findByProfessor_ReturnProfessor_WhenSuccessful() {
-
-        /// CONFIGURAÇÃO
-        professorRepository.save(ProfessorCreator.creatingValidProfessor());
-        Disciplina expectedDisciplina = disciplinaRepository.save(DisciplinaCreator.creatingValidDisciplina());
-        String expectedNomeOfDisciplina = expectedDisciplina.getNome();
-        Professor expectedProfessorOfDisciplina = expectedDisciplina.getProfessor();
-
-        /// EXECUÇÃO
-        Disciplina resultDisciplina = disciplinaRepository.findByProfessor(expectedProfessorOfDisciplina).get();
-
-        /// VERIFICAÇÃO
-
-        assertAll("validations",
-                () -> assertThat(resultDisciplina).isNotNull(),
-                () -> assertThat(resultDisciplina.getNome()).isNotNull(),
-                () -> assertThat(resultDisciplina.getNome()).isNotEmpty(),
-                () -> assertThat(resultDisciplina.getNome()).isEqualTo(expectedNomeOfDisciplina),
-                () -> assertThat(resultDisciplina.getProfessor()).isEqualTo(expectedProfessorOfDisciplina)
-        );
-    }
+//    @Test
+//    public void findByProfessor_ReturnProfessor_WhenSuccessful() {
+//
+//        /// CONFIGURAÇÃO
+//        professorRepository.save(ProfessorCreator.creatingValidProfessor());
+//        Disciplina expectedDisciplina = disciplinaRepository.save(DisciplinaCreator.creatingValidDisciplina());
+//        String expectedNomeOfDisciplina = expectedDisciplina.getNome();
+//        Professor expectedProfessorOfDisciplina = expectedDisciplina.getProfessor();
+//
+//        /// EXECUÇÃO
+//        Disciplina resultDisciplina = disciplinaRepository.findByProfessor(expectedProfessorOfDisciplina).get();
+//
+//        /// VERIFICAÇÃO
+//
+//        assertAll("validations",
+//                () -> assertThat(resultDisciplina).isNotNull(),
+//                () -> assertThat(resultDisciplina.getNome()).isNotNull(),
+//                () -> assertThat(resultDisciplina.getNome()).isNotEmpty(),
+//                () -> assertThat(resultDisciplina.getNome()).isEqualTo(expectedNomeOfDisciplina),
+//                () -> assertThat(resultDisciplina.getProfessor()).isEqualTo(expectedProfessorOfDisciplina)
+//        );
+//    }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Notas.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-notas</a> &gt; <a href="index.source.html" class="el_package">petcc.course.spring.sistemanotas.model</a> &gt; <span class="el_source">Notas.java</span></div><h1>Notas.java</h1><pre class="source lang-java linenums">package petcc.course.spring.sistemanotas.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+<span class="nc bnc" id="L12" title="All 46 branches missed.">@Data</span>
+<span class="nc" id="L13">@AllArgsConstructor</span>
+<span class="fc" id="L14">@NoArgsConstructor</span>
+<span class="nc" id="L15">@Builder</span>
+@Entity
+public class Notas {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+<span class="nc" id="L20">    private Integer id;</span>
+    @ManyToOne
+<span class="nc" id="L22">    private Aluno aluno;</span>
+    @ManyToOne
+<span class="nc" id="L24">    private Disciplina disciplina;</span>
+    @NotNull(message = &quot;A nota não pode ser nula&quot;)
+    @Min(value = 0, message = &quot;A nota não pode ser negativa&quot;)
+<span class="nc" id="L27">    private Double nota;</span>
+    @NotNull(message = &quot;O semestre da nota não pode ser nulo&quot;)
+<span class="nc" id="L29">    private String semestre;</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

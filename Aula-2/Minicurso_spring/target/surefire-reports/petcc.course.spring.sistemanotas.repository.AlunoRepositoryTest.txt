@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: petcc.course.spring.sistemanotas.repository.AlunoRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.942 s - in petcc.course.spring.sistemanotas.repository.AlunoRepositoryTest

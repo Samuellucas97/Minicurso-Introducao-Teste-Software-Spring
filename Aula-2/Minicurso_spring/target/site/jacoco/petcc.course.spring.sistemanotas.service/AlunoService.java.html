@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AlunoService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-notas</a> &gt; <a href="index.source.html" class="el_package">petcc.course.spring.sistemanotas.service</a> &gt; <span class="el_source">AlunoService.java</span></div><h1>AlunoService.java</h1><pre class="source lang-java linenums">package petcc.course.spring.sistemanotas.service;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+import petcc.course.spring.sistemanotas.exception.ResourceNotFoundException;
+import petcc.course.spring.sistemanotas.model.Aluno;
+import petcc.course.spring.sistemanotas.repository.AlunoRepository;
+
+import java.util.List;
+
+@Service
+<span class="fc" id="L14">@RequiredArgsConstructor</span>
+public class AlunoService {
+    private final AlunoRepository alunoRepository;
+
+    public List&lt;Aluno&gt; findAll(){
+<span class="fc" id="L19">        return this.alunoRepository.findAll();</span>
+    }
+
+    public List&lt;Aluno&gt; findByName(String name){
+<span class="fc" id="L23">        return this.alunoRepository.findByNome(name);</span>
+    }
+
+    public Aluno findById(Integer id){
+<span class="fc" id="L27">        return this.findAlunoOrThrowNotFound(id);</span>
+    }
+
+    public Aluno save(Aluno aluno){
+<span class="fc" id="L31">        return this.alunoRepository.save(aluno);</span>
+    }
+
+    public void delete(Integer id){
+<span class="fc" id="L35">        this.alunoRepository.delete(this.findAlunoOrThrowNotFound(id));</span>
+<span class="fc" id="L36">    }</span>
+
+    public void update(Aluno aluno) {
+<span class="nc" id="L39">        this.alunoRepository.save(aluno);</span>
+<span class="nc" id="L40">    }</span>
+
+    private Aluno findAlunoOrThrowNotFound(Integer id) {
+<span class="fc" id="L43">        return this.alunoRepository.findById(id)</span>
+<span class="pc" id="L44">                .orElseThrow(() -&gt; new ResourceNotFoundException(&quot;Aluno não encontrado&quot;));</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

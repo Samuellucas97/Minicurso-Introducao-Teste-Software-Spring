@@ -6,6 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import petcc.course.spring.sistemanotas.exception.ResourceNotFoundException;
 import petcc.course.spring.sistemanotas.model.Aluno;
 import petcc.course.spring.sistemanotas.repository.AlunoRepository;
 import petcc.course.spring.sistemanotas.util.AlunoCreator;
@@ -14,10 +15,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
@@ -70,20 +72,17 @@ class AlunoServiceTest {
     public void findByName_ReturnListOfAluno_WhenSuccessful() {
 
         // CONFIGURAÇÃO
-
         Aluno aluno = AlunoCreator.creatingValidAluno();
         String expectedNameAluno = aluno.getNome();
 
         when(alunoServiceSUT.findByName(any()))
                 .thenReturn(List.of(aluno));
         // EXECUÇÃO
-
         List<Aluno> resultAlunoList = alunoServiceSUT.findByName("fake");
         List<String> resultNomeOfAlunoList = resultAlunoList.stream()
                 .map(Aluno::getNome).collect(Collectors.toList());
 
         // VERIFICAÇÃO
-
         assertAll("validations",
                 () -> assertThat(resultAlunoList).isNotEmpty(),
                 () -> assertThat(resultNomeOfAlunoList).contains(expectedNameAluno)
@@ -112,13 +111,40 @@ class AlunoServiceTest {
     }
 
     @Test
-    public void delete_RemoveAluno_WhenSuccessful(){
+    public void save_CreateAluno_WhenSuccessful() {
+        Aluno expectedAluno = AlunoCreator.creatingValidAluno();
+        Integer expectedIdAluno = expectedAluno.getId();
+        Aluno alunoTobeSaved = AlunoCreator.creatingAlunoToBeSaved();
+        when(alunoRepositoryMock.save(alunoTobeSaved))
+                .thenReturn(expectedAluno);
 
-        /// CONFIGURAÇÃO
-        /// EXECUÇÃO
-//        alunoServiceSUT.delete();
-        /// VERIFICAÇÃO
+        Aluno resultAluno = alunoServiceSUT.save(alunoTobeSaved);
 
+        assertAll("validations",
+                () -> assertThat(resultAluno).isNotNull(),
+                () -> assertThat(resultAluno.getId()).isNotNull(),
+                () -> assertThat(resultAluno.getId()).isEqualTo(expectedIdAluno)
+        );
     }
 
+    @Test
+    public void delete_RemoveAluno_WhenSuccessful(){
+        /// CONFIGURAÇÃO
+        when(alunoRepositoryMock.findById(anyInt()))
+                .thenReturn(Optional.of(AlunoCreator.creatingValidAluno()));
+        doNothing().when(alunoRepositoryMock).delete(any(Aluno.class));
+
+        /// EXECUÇÃO e VERIFICAÇÃO
+        assertThatCode(() -> alunoServiceSUT.delete(1))
+                .doesNotThrowAnyException();
+    }
+
+    @Test
+    public void delete_ThrowsResourceNotFoundException_WhenAnimeDoesNotExist() {
+        when(alunoRepositoryMock.findById(anyInt()))
+                .thenThrow(new ResourceNotFoundException("Aluno não encontrado"));
+
+        assertThatExceptionOfType(ResourceNotFoundException.class)
+                .isThrownBy(() -> alunoServiceSUT.delete(1));
+    }
 }
