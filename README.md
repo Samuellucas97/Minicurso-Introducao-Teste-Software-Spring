@@ -3,6 +3,11 @@
 Este repositório contém o material referente ao minicurso online de **Introdução ao Teste de Software com Springboot** apresentado por _Samuel Lucas_ e oferecido pelo Programa de Educação Tutorial do curso de Ciência da Computação da Universidade Federal do Rio Grande do Norte. O minicurso online é voltado ao público que esteja interessado em aprender sobre e como aplicar conhecimentos de Teste de Software em projeto Spring.  
 
 
+## Metodologia
+
+Trata-se de um minicurso online composto por 7 módulos. A gravação das aulas está disponibilizado no canal do Youtube do PET Ciência da Computação. No curso há introdução de conceitos teóricos relacionados a área de teste juntamente com implementação de código.
+
+
 | Módulo |                    Descrição                    | Material |   Aula  |
 |:------:|:-----------------------------------------------:|:--------:|:-------:|
 |    1   |     Introdução a teoria de Teste de Software    |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
@@ -12,11 +17,6 @@ Este repositório contém o material referente ao minicurso online de **Introdu�
 |    5   | Continuação da codificação dos testes unitários |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
 |    6   | Finalização da codificação dos testes unitários |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
 |    7   |               Teste de integração               |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-
-## Metodologia
-
-Trata-se de um minicurso online composto por 7 módulos. A gravação das aulas está disponibilizado no canal do Youtube do PET Ciência da Computação. No curso há introdução de conceitos teóricos relacionados a área de teste juntamente com implementação de código.
-
 
 ## Conhecimentos necessários
 
