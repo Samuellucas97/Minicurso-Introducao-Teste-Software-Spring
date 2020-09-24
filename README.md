@@ -5,7 +5,7 @@ Este repositório contém o material referente ao minicurso online de **Introdu�
 
 ## Metodologia
 
-Trata-se de um minicurso online composto por 7 módulos. A gravação das aulas está disponibilizado no canal do Youtube do PET Ciência da Computação. No curso há introdução de conceitos teóricos relacionados a área de teste juntamente com implementação de código.
+Trata-se de um minicurso online composto por **7 módulos**. A gravação das aulas está disponibilizado no canal do Youtube do PET Ciência da Computação. No curso há introdução de conceitos teóricos relacionados a área de teste juntamente com implementação de código.
 
 
 | Módulo |                    Descrição                    | Material |   Aula  |
