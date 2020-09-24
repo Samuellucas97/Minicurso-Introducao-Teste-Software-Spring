@@ -12,10 +12,8 @@ Trata-se de um minicurso online composto por 7 módulos. A gravação das aulas 
 
 ## Conhecimentos necessários
 
- - Conhecimentos de programação com o framework de desenvolvimento Spring na linguagem Java
+ - Programação com o framework [Spring](https://spring.io/) na linguagem Java
  
- Obs.: Caso não haja conhecimento disso, há um minicurso online de **Introdução ao Springboot** no canal do Youtube do PET Ciência da Computação.
-
 
 ## Ferramentas usadas
 
