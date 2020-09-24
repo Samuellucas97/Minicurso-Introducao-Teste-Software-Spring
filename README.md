@@ -1,6 +1,6 @@
 ## Introdução
 
-Este repositório contém o material referente ao minicurso online de Introdução ao Teste de Software com Spring apresentado por Samuel Lucas e oferecido pelo Programa de Educação Tutorial do curso de Ciência da Computação da Universidade Federal do Rio Grande do Norte.
+Este repositório contém o material referente ao minicurso online de **Introdução ao Teste de Software com Springboot** apresentado por _Samuel Lucas_ e oferecido pelo Programa de Educação Tutorial do curso de Ciência da Computação da Universidade Federal do Rio Grande do Norte.
 
 
 | Módulo |                    Descrição                    | Material |   Aula  |
