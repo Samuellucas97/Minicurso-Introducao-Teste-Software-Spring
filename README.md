@@ -2,6 +2,17 @@
 
 Este repositório contém o material referente ao minicurso online de Introdução ao Teste de Software com Spring apresentado por Samuel Lucas e oferecido pelo Programa de Educação Tutorial do curso de Ciência da Computação da Universidade Federal do Rio Grande do Norte.
 
+
+| Módulo |                    Descrição                    | Material |   Aula  |
+|:------:|:-----------------------------------------------:|:--------:|:-------:|
+|    1   |     Introdução a teoria de Teste de Software    |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    2   |         Framework de automação de testes        |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    3   |        Configurando dependências de teste       |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    4   |    Início da codificação dos testes unitários   |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    5   | Continuação da codificação dos testes unitários |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    6   | Finalização da codificação dos testes unitários |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    7   |               Teste de integração               |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+
 ## Metodologia
 
 Trata-se de um minicurso online composto por 7 módulos. A gravação das aulas está disponibilizado no canal do Youtube do PET Ciência da Computação. No curso há introdução de conceitos teóricos relacionados a área de teste juntamente com implementação de código.
@@ -10,7 +21,7 @@ Trata-se de um minicurso online composto por 7 módulos. A gravação das aulas 
 ## Conhecimentos necessários
 
  - Programação com o framework [Spring](https://spring.io/) na linguagem Java
- 
+
 
 ## Ferramentas usadas
 
