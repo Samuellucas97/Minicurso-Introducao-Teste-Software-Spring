@@ -24,6 +24,7 @@ Trata-se de um minicurso online composto por 7 módulos. A gravação das aulas 
 
 
 ## Ferramentas usadas
+     Adotou-se o JDK 11 durante o minicurso.
 
 ### **IntelliJ IDEA**
 
