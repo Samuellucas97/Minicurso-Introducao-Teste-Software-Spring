@@ -30,7 +30,7 @@ Trata-se de um minicurso online composto por **7 módulos**. A gravação das au
 ## Ferramentas usadas
      Adotou-se o JDK 11 durante o minicurso.
 
-### **IntelliJ IDEA**
+### **IntelliJ IDEA** (opcional)
 
 IntelliJ IDEA é um ambiente de desenvolvimento integrado criado pela Jetbrains. É realmente incrível usá-la por causa que os atalhos e configurações por padrão tornam a vida do programado mais fácil. Esta disponível [no site oficial da Jetbrains](https://www.jetbrains.com/pt-br/idea/download/#section=linux) onde você poderá descobrir como instalá-lo. Infelizmente, a versão completa é paga, mas é possível baixá-la e usá-la durante 30 dias por perído de teste gratuito.
 
