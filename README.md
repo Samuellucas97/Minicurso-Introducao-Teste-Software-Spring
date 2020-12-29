@@ -36,7 +36,7 @@ IntelliJ IDEA é um ambiente de desenvolvimento integrado criado pela Jetbrains.
 
 ### **Docker** (opcional)
 
-Docker é um tecnologia de containeres usada durante o curso para prover o banco de MYSQL. Você verá o quão fantástica e simples essa tecnologia é. Para fazer download dela, existe muito conteúdo na internet. Este é o site oficial com a [documentação do Docker](https://docs.docker.com/engine/install/) onde você pode descobrir como instalar para o sistema operacional que você esteja usando.
+Docker é um tecnologia de containeres usada durante o curso para prover o banco de MySQL. Você verá o quão fantástica e simples essa tecnologia é. Para fazer download dela, existe muito conteúdo na internet. Este é o site oficial com a [documentação do Docker](https://docs.docker.com/engine/install/) onde você pode descobrir como instalar para o sistema operacional que você esteja usando.
 
 ### Postman 
 
