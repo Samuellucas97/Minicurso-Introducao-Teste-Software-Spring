@@ -14,13 +14,13 @@ Trata-se de um minicurso online composto por **7 módulos**. A gravação das au
 
 | Módulo |                    Descrição                    | Material |   Aula  |
 |:------:|:-----------------------------------------------:|:--------:|:-------:|
-|    1   |     Introdução a teoria de Teste de Software    |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    2   |         Framework de automação de testes        |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    3   |        Configurando dependências de teste       |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    4   |    Início da codificação dos testes unitários   |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    5   | Continuação da codificação dos testes unitários |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    6   | Finalização da codificação dos testes unitários |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    7   |               Teste de integração               |    pdf   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    1   |     Introdução a teoria de Teste de Software    |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    2   |         Framework de automação de testes        |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    3   |        Configurando dependências de teste       |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    4   |    Início da codificação dos testes unitários   |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    5   | Continuação da codificação dos testes unitários |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    6   | Finalização da codificação dos testes unitários |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    7   |               Teste de integração               |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
 
 ## Conhecimentos necessários
 

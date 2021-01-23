@@ -1,0 +1,11 @@
+
+U
+java:S1854"<Remove this useless assignment to local variable "mensagem".(É ùïşÿÿÿÿ
+J
+java:S1128"1Remove this unused import 'java.util.Collection'.(¹ÉĞšùÿÿÿÿ
+F
+java:S1481"-Remove this unused "mensagem" local variable.(É ùïşÿÿÿÿ
+?
+java:S1481"+Remove this unused "campos" local variable.(§©ì”
+N
+java:S1854":Remove this useless assignment to local variable "campos".(§©ì”
