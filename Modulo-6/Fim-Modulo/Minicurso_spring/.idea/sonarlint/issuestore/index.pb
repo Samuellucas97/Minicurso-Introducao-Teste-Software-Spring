@@ -17,3 +17,5 @@ Lsrc/test/java/petcc/course/spring/sistemanotas/service/AlunoServiceTest.java,4
 Wsrc/main/java/petcc/course/spring/sistemanotas/exception/ResourceNotFoundException.java,8/b/8b7ba658170036284d329666c70f1f288fc84d14
 €
 Psrc/main/java/petcc/course/spring/sistemanotas/handler/RestExceptionHandler.java,5/c/5c932430a3849314e75013050e911b3584524eb3
+‚
+Rsrc/test/java/petcc/course/spring/sistemanotas/controller/AlunoControllerTest.java,f/f/ff032e26ae60fcb80e5108d67c35844e2a89d898
