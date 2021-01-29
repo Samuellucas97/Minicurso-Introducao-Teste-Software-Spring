@@ -14,13 +14,13 @@ Trata-se de um minicurso online composto por **7 módulos**. A gravação das au
 
 | Módulo |                    Descrição                    | Material |   Aula  |
 |:------:|:-----------------------------------------------:|:--------:|:-------:|
-|    1   |     Introdução a teoria de Teste de Software    |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    2   |         Framework de automação de testes        |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    3   |        Configurando dependências de teste       |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    4   |    Início da codificação dos testes unitários   |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    5   | Continuação da codificação dos testes unitários |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    6   | Finalização da codificação dos testes unitários |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
-|    7   |               Teste de integração               |    [pdf](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ)   | [Youtube](https://www.youtube.com/channel/UC_1IEMXjN5YMaUFYhcx4JXQ) |
+|    1   |     Introdução a teoria de Teste de Software    |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-1/Modulo_1-Introducao-a-Teoria-de-Teste-de-Software.pdf)   | [Youtube](https://youtu.be/TQ4T8x2jMXw) |
+|    2   |         Framework de automação de testes        |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-2/Modulo_2-Framework-de-automacao-de-Testes.pdf)   | [Youtube](https://youtu.be/IZkrN9OskHo) |
+|    3   |        Configurando dependências de teste       |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-3/Modulo_3-Configurando-Dependencias-de-Teste.pdf)   | [Youtube](https://youtu.be/DyVMbQ4lWlk) |
+|    4   |    Início da codificação dos testes unitários   |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-4/Modulo_4-Inicio-da-Codificacao-dos-Testes-Unitarios.pdf)   | [Youtube](https://youtu.be/m-Qz0uY6pQw) |
+|    5   | Continuação da codificação dos testes unitários |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-5/Modulo_5-Continuacao-da-Codificacao-dos-Testes-Unitarios.pdf)   | [Youtube](https://youtu.be/gujaqKAy8EM) |
+|    6   | Finalização da codificação dos testes unitários |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-6/Modulo_6-Finalizacao-da-Codificacao-dos-Testes-Unitarios.pdf)   | [Youtube](https://youtu.be/xinEEdJBHEU) |
+|    7   |               Teste de integração               |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-7/Modulo_7-Teste-de-Integracao.pdf)   | [Youtube]() |
 
 ## Conhecimentos necessários
 
