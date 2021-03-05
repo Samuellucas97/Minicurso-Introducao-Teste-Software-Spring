@@ -1,10 +1,11 @@
 ## Introdução
 
-Este repositório contém o material referente ao minicurso online de **Introdução ao Teste de Software com Spring** apresentado por _Samuel Lucas_ e oferecido pelo Programa de Educação Tutorial do curso de Ciência da Computação da Universidade Federal do Rio Grande do Norte (_PETCC UFRN_). O minicurso online é voltado ao público que esteja interessado em aprender sobre e como aplicar conhecimentos de Teste de Software em projeto Spring.  
+Este repositório contém o material referente ao minicurso online de **Introdução ao Teste de Software com Spring** desenvolvido e apresentado por _Samuel Lucas_ e oferecido pelo Programa de Educação Tutorial do curso de Ciência da Computação da Universidade Federal do Rio Grande do Norte (_PETCC UFRN_). O minicurso online é voltado ao público que esteja interessado em aprender sobre e como aplicar conhecimentos de Teste de Software em projeto Spring.  
 
 - [Metodologia](#metodologia) - Organização adotada durante a ministração do curso.
 - [Conhecimentos necessários](#conhecimentos-necessários) - Pré-requisitos para boa compreensão do curso.
 - [Ferramentas usadas](#ferramentas-usadas) - Tecnologias utilizadas durante o curso.
+- [Referências](#referências) - Material de referência.
 
 
 ## Metodologia
@@ -41,3 +42,8 @@ Docker é um tecnologia de containeres usada durante o curso para prover o banco
 ### Postman 
 
 Postman é um cliente de API. Por meio dele poderemos realizar testes manuais com nossa api rest. Nós podemos fazer a verificação de todos os verbos HTTP, trata-se de uma ferramenta bem útil e completa, além de ser gratuita. Este é o [site oficial](https://www.postman.com/downloads/) onde você poderá descobrir como realizar o download e instalação dessa ferramenta.
+
+## Referências
+
+* [Springboot 2 - Essentials (DevDojo)](https://github.com/devdojoacademy/springboot2-essentials)
+
