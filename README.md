@@ -21,7 +21,7 @@ Trata-se de um minicurso online composto por **7 módulos**. A gravação das au
 |    4   |    Início da codificação dos testes unitários   |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-4/Modulo_4-Inicio-da-Codificacao-dos-Testes-Unitarios.pdf)   | [Youtube](https://youtu.be/m-Qz0uY6pQw) |
 |    5   | Continuação da codificação dos testes unitários |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-5/Modulo_5-Continuacao-da-Codificacao-dos-Testes-Unitarios.pdf)   | [Youtube](https://youtu.be/gujaqKAy8EM) |
 |    6   | Finalização da codificação dos testes unitários |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-6/Modulo_6-Finalizacao-da-Codificacao-dos-Testes-Unitarios.pdf)   | [Youtube](https://youtu.be/xinEEdJBHEU) |
-|    7   |               Teste de integração               |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-7/Modulo_7-Teste-de-Integracao.pdf)   | [Youtube]() |
+|    7   |               Teste de integração               |    [pdf](https://github.com/Samuellucas97/Minicurso-Introducao-Teste-Software-Spring/blob/master/Modulo-7/Modulo_7-Teste-de-Integracao.pdf)   | [Youtube](https://youtu.be/nRvsbZDEAa4) |
 
 ## Conhecimentos necessários
 
